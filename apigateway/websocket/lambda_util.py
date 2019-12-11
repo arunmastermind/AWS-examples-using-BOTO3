@@ -1,28 +1,3 @@
-# snippet-comment:[These are tags for the AWS doc team's sample catalog. Do not remove.]
-# snippet-sourcedescription:[lambda_util.py implements a group of utility functions to manage AWS Lambda functions.]
-# snippet-service:[lambda]
-# snippet-keyword:[AWS Lambda]
-# snippet-keyword:[Python]
-# snippet-sourcesyntax:[python]
-# snippet-sourcesyntax:[python]
-# snippet-keyword:[Code Sample]
-# snippet-sourcetype:[snippet]
-# snippet-sourcedate:[2019-07-29]
-# snippet-sourceauthor:[AWS]
-
-# Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License"). You
-# may not use this file except in compliance with the License. A copy of
-# the License is located at
-#
-# http://aws.amazon.com/apache2.0/
-#
-# or in the "license" file accompanying this file. This file is
-# distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
-# ANY KIND, either express or implied. See the License for the specific
-# language governing permissions and limitations under the License.
-
 """AWS Lambda utility functions
 
 The create_lambda_function() performs all the necessary operations to create and deploy a Lambda function,

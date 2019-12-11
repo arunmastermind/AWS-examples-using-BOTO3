@@ -1,29 +1,3 @@
-# snippet-comment:[These are tags for the AWS doc team's sample catalog. Do not remove.]
-# snippet-sourcedescription:[aws_service.py demonstrates how to create an API Gateway REST interface to an AWS service.]
-# snippet-service:[apigateway]
-# snippet-keyword:[API Gateway]
-# snippet-keyword:[Python]
-# snippet-sourcesyntax:[python]
-# snippet-sourcesyntax:[python]
-# snippet-keyword:[Code Sample]
-# snippet-sourcetype:[snippet]
-# snippet-sourcedate:[2019-08-14]
-# snippet-sourceauthor:[AWS]
-
-# Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License"). You
-# may not use this file except in compliance with the License. A copy of
-# the License is located at
-#
-# http://aws.amazon.com/apache2.0/
-#
-# or in the "license" file accompanying this file. This file is
-# distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
-# ANY KIND, either express or implied. See the License for the specific
-# language governing permissions and limitations under the License.
-
-
 import argparse
 import json
 import logging
@@ -242,19 +216,6 @@ def create_rest_api_for_aws_service(api_name, region):
     if iam_role_arn is None:
         return None
 
-    # Construct the URI for the Amazon Translate.TranslateText service
-    # Note: A bug exists in the processing of the Translate URI. Specifically,
-    # passing the correct service value of 'translate' to put_integration()
-    # does not link the integration to the Translate service. Instead, to link
-    # the integration, the service must be specified as 'Translate' (uppercase
-    # 'T'). However, having 'Translate' in the URI causes the subsequent call
-    # to create_deployment() to fail with an unrecognized service. The
-    # workaround is to use the 'translate' service in the URI for both
-    # put_integration() and create_deployment(). Then to link the integration
-    # to the service, call update_integration() to replace the URI to use
-    # 'Translate'. After this bug is fixed, the translate_uri_updated variable
-    # defined below can be removed, along with the call to update_integration()
-    # later in this function.
     translate_uri = f'arn:aws:apigateway:{region}:translate:action/TranslateText'
     translate_uri_updated = f'arn:aws:apigateway:{region}:Translate:action/TranslateText'
 
